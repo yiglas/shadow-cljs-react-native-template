@@ -1,0 +1,13 @@
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [[reagent "0.8.1"]]
+
+ :builds
+ {:app
+  {:target :react-native
+   :init-fn core/init
+   :output-dir "build"
+   :devtools {:autoload true
+              :after-load core/reload}}}}
