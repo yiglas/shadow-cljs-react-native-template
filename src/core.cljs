@@ -1,9 +1,6 @@
 (ns core
   (:require [reagent.core :as r :refer [atom]]
-            ["react-native" :as rn :refer [AppRegistry]]
-            [nav-bar :as nav-bar]
-            [add-player :as add-player]
-            [player :as player]))
+            ["react-native" :as rn :refer [AppRegistry]]))
 
 (enable-console-print!)
 (rn/YellowBox.ignoreWarnings #js ["Warning: componentWillMount"
@@ -19,10 +16,10 @@
    "Hi Shadow!"])
 
 (defn app-root []
-  [:> rn/View {:style {:flex-direction "column"
+  [:> rn/SafeAreaView {:style {:flex-direction "column"}
                        :flex 1
                        :margin 5
-                       :background-color "white"}}
+                       :background-color "white"}
    [content]])
 
 
