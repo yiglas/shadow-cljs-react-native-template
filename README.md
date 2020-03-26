@@ -40,5 +40,3 @@ $ yarn install
 $ yarn watch
 $ yarn ios
 ```
-
-
